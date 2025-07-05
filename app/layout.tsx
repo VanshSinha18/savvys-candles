@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-black">
+      <head>
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body className="min-h-screen flex flex-col bg-black">
         <ScrollProgressBar />
         <Providers>

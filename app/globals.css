@@ -8,6 +8,8 @@
 html,
 body {
   @apply bg-black text-white;
+  background: #000 !important;
+  color: #fff !important;
 }
 
 body {

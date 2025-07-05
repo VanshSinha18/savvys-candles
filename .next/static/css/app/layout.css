@@ -716,9 +716,6 @@ video {
 .aspect-\[9\/16\]{
   aspect-ratio: 9/16;
 }
-.h-1{
-  height: 0.25rem;
-}
 .h-10{
   height: 2.5rem;
 }
@@ -761,6 +758,9 @@ video {
 .min-h-screen{
   min-height: 100vh;
 }
+.w-0\.5{
+  width: 0.125rem;
+}
 .w-10{
   width: 2.5rem;
 }
@@ -784,18 +784,6 @@ video {
 }
 .w-full{
   width: 100%;
-}
-.w-2{
-  width: 0.5rem;
-}
-.w-1{
-  width: 0.25rem;
-}
-.w-11{
-  width: 2.75rem;
-}
-.w-0\.5{
-  width: 0.125rem;
 }
 .min-w-\[370px\]{
   min-width: 370px;
@@ -1418,6 +1406,8 @@ body{
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  background: #000 !important;
+  color: #fff !important;
 }
 
 body{
