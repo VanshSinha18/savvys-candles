@@ -38,6 +38,7 @@ module.exports = {
           "sans-serif",
         ],
         heading: ["Aeonik", "sans-serif"],
+        michroma: ["Michroma", "sans-serif"],
       },
       boxShadow: {
         luxury: "0 8px 32px 0 rgba(44, 44, 84, 0.12)",

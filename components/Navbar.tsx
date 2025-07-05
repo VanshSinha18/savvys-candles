@@ -11,7 +11,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-dancing text-3xl font-bold tracking-tight text-purple drop-shadow-sm"
+          className="font-michroma text-3xl font-bold tracking-tight text-purple drop-shadow-sm"
           style={{ letterSpacing: "0.04em" }}
         >
           Savvy's Candles

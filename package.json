@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "clsx": "^2.1.1",
+    "dotenv": "^17.0.1",
     "framer-motion": "^12.19.1",
     "gsap": "^3.13.0",
     "motion": "^12.19.1",

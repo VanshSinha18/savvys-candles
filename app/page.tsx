@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import { motion } from "framer-motion";
 import GridBackground from "../components/GridBackground";
 import { AppleCardsCarouselDemo } from "../components/ui/apple-cards-carousel";
+import CandleGrid from "../components/CandleGrid";
 import gsap from "gsap";
 import AboutUsSection from "../components/AboutUsSection";
 import FAQSection from "../components/FAQSection";
@@ -101,7 +102,7 @@ export default function HomePage() {
         id="products"
         className="pt-4 pb-8 bg-transparent z-20 relative"
       >
-        <AppleCardsCarouselDemo />
+        <CandleGrid />
 
         <FAQSection />
       </section>
