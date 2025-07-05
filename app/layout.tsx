@@ -24,8 +24,12 @@ export default function RootLayout({
     <html lang="en" className="bg-black">
       <head>
         <meta name="theme-color" content="#000000" />
+        <style>{`html,body{background:#000!important;color:#fff!important;}`}</style>
       </head>
-      <body className="min-h-screen flex flex-col bg-black">
+      <body
+        className="min-h-screen flex flex-col bg-black"
+        style={{ background: "#000", color: "#fff" }}
+      >
         <ScrollProgressBar />
         <Providers>
           <Navbar />
