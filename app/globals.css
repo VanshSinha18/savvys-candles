@@ -11,22 +11,6 @@ body {
   color: #fff !important;
 }
 
-@media (prefers-color-scheme: light) {
-  html,
-  body {
-    background: #000 !important;
-    color: #fff !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background: #000 !important;
-    color: #fff !important;
-  }
-}
-
 body {
   @apply font-sans antialiased;
 }
