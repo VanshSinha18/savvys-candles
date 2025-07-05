@@ -11,23 +11,26 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-dancing text-3xl font-bold tracking-tight text-gold drop-shadow-sm"
+          className="font-dancing text-3xl font-bold tracking-tight text-purple drop-shadow-sm"
           style={{ letterSpacing: "0.04em" }}
         >
           Savvy's Candles
         </Link>
         {/* Nav Links */}
         <div className="hidden md:flex gap-8 text-base font-medium">
-          <Link href="/" className="hover:text-gold transition text-white">
+          <Link href="/" className="hover:text-purple transition text-white">
             Home
           </Link>
           <a
             href="/#products"
-            className="hover:text-gold transition text-white cursor-pointer"
+            className="hover:text-purple transition text-white cursor-pointer"
           >
             Products
           </a>
-          <Link href="/about" className="hover:text-gold transition text-white">
+          <Link
+            href="/about"
+            className="hover:text-purple transition text-white"
+          >
             About
           </Link>
         </div>
@@ -35,19 +38,19 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <Link
             href="/cart"
-            className="relative text-xl hover:text-gold transition text-white"
+            className="relative text-xl hover:text-purple transition text-white"
             aria-label="Cart"
           >
             <FaShoppingCart />
             {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-gold text-white text-xs rounded-full px-1.5 py-0.5">
+              <span className="absolute -top-2 -right-2 bg-purple text-white text-xs rounded-full px-1.5 py-0.5">
                 {cartCount}
               </span>
             )}
           </Link>
           <Link
             href="/profile"
-            className="text-xl hover:text-gold transition text-white"
+            className="text-xl hover:text-purple transition text-white"
             aria-label="Profile"
           >
             <FaUser />

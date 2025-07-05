@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useCart } from "../../context/CartContext";
 gsap.registerPlugin(ScrollTrigger);
 
 export function Carousel({ items }: { items: React.ReactNode[] }) {
@@ -110,10 +111,12 @@ export function Card({
 }: {
   card: any;
   index: number;
-  cardRef?: (el: HTMLDivElement) => void;
+  cardRef?: (el: HTMLDivElement | null) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [added, setAdded] = useState(false);
   const cardDivRef = useRef<HTMLDivElement>(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const el = cardDivRef.current;
@@ -151,13 +154,14 @@ export function Card({
     };
   }, []);
 
+  useEffect(() => {
+    if (cardRef) cardRef(cardDivRef.current);
+  }, [cardRef]);
+
   return (
     <>
       <div
-        ref={(node) => {
-          cardDivRef.current = node;
-          if (cardRef) cardRef(node!);
-        }}
+        ref={cardDivRef}
         className="relative min-w-[370px] max-w-[370px] aspect-[9/16] bg-zinc-900 rounded-[2rem] shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-800 flex flex-col overflow-hidden cursor-pointer group"
         onClick={() => setOpen(true)}
         style={{ height: "600px" }}
@@ -172,7 +176,7 @@ export function Card({
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-[2rem]" />
         {/* Text overlay (top-left) */}
         <div className="absolute top-0 left-0 p-6 z-10 w-full">
-          <span className="block text-xs md:text-sm uppercase tracking-wider text-gold font-semibold mb-2 font-sans drop-shadow">
+          <span className="block text-xs md:text-sm uppercase tracking-wider text-purple font-semibold mb-2 font-sans drop-shadow">
             {card.category}
           </span>
           <h3 className="font-sans font-extrabold text-white text-2xl md:text-3xl leading-tight drop-shadow mb-0">
@@ -200,8 +204,25 @@ export function Card({
               <img
                 src={card.src}
                 alt={card.title}
-                className="w-full max-w-md object-contain rounded-xl"
+                className="w-full max-w-md object-contain rounded-xl mb-6"
               />
+              <button
+                className="mt-4 px-8 py-3 rounded-full bg-purple text-white font-bold text-lg shadow hover:bg-purple/90 transition disabled:opacity-60"
+                onClick={() => {
+                  addToCart({
+                    id: card.id,
+                    name: card.title,
+                    price: card.price,
+                    imageUrl: card.src,
+                    quantity: 1,
+                  });
+                  setAdded(true);
+                  setTimeout(() => setAdded(false), 1500);
+                }}
+                disabled={added}
+              >
+                {added ? "Added!" : "Add to Cart"}
+              </button>
             </div>
           </div>
         </div>
@@ -247,16 +268,18 @@ export function AppleCardsCarouselDemo() {
     <Card
       key={product.id}
       card={{
+        id: product.id,
         category: "Candle",
         title: product.name,
         src: product.imageUrl,
+        price: product.price,
         content: (
           <div className="text-zinc-100 text-lg md:text-2xl font-sans max-w-3xl mx-auto text-center">
             <span className="font-bold text-white block mb-2">
               {product.name}
             </span>
             <span className="block mb-2">{product.description}</span>
-            <span className="text-gold font-semibold text-xl">
+            <span className="text-purple font-semibold text-xl">
               ${(product.price / 100).toFixed(2)}
             </span>
           </div>

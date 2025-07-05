@@ -29,16 +29,16 @@ export default function ProductCard({
         />
       </div>
       <div className="flex-1 flex flex-col px-6 py-5">
-        <h2 className="font-heading text-xl font-bold text-white mb-1 group-hover:text-gold transition-colors">
+        <h2 className="font-heading text-xl font-bold text-white mb-1 group-hover:text-purple transition-colors">
           {name}
         </h2>
         <p className="text-zinc-400 text-sm mb-3 line-clamp-2">{description}</p>
         <div className="flex items-center justify-between mt-auto">
-          <span className="font-bold text-gold text-lg">
+          <span className="font-bold text-purple text-lg">
             ${(price / 100).toFixed(2)}
           </span>
           <button
-            className="bg-gold text-white font-medium px-4 py-2 rounded-full shadow hover:bg-black hover:text-gold transition-colors duration-200"
+            className="bg-purple text-white font-medium px-4 py-2 rounded-full shadow hover:bg-black hover:text-purple transition-colors duration-200"
             onClick={() =>
               addToCart({ id, name, price, imageUrl, quantity: 1 })
             }

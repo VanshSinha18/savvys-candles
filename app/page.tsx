@@ -65,26 +65,31 @@ export default function HomePage() {
       {/* Spotlight background, covers hero and top of products */}
       <div className="pointer-events-none absolute left-0 top-0 w-full h-[900px] z-0">
         <Spotlight
-          className="left-1/2 top-[10%] -translate-x-1/2 -translate-y-[10%] w-[180vw] h-[120vh]"
-          fill="#D4AF37"
+          className="left-[35vw] top-0 -translate-y-[20%] w-[400vw] h-[220vh]"
+          fill="#A259F7"
         />
       </div>
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative flex min-h-[60vh] w-full items-center justify-center bg-transparent overflow-hidden z-10"
+        className="relative flex min-h-screen w-full items-center justify-start bg-transparent overflow-hidden z-10 pt-0"
       >
         {/* Hero Content */}
-        <div className="relative z-20 max-w-3xl text-center mx-auto">
+        <div className="relative z-20 max-w-3xl text-left mx-auto md:ml-0 md:mr-auto pb-24">
           <h1 className="font-extrabold text-4xl md:text-6xl leading-tight mb-4 font-sans text-white">
-            Discover <span className="text-gold">Premium Candles</span>
+            Discover <span className="text-purple">Premium Candles</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8">
             Hand-poured, eco-friendly, and designed to elevate your space.
           </p>
           <a
             href="#products"
-            className="inline-block bg-gold text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-charcoal hover:text-gold transition"
+            className="inline-block bg-purple text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-charcoal hover:text-purple transition"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById("products");
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Shop Now
           </a>

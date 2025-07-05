@@ -62,13 +62,13 @@ export default function FAQSection() {
             className="bg-zinc-900 rounded-xl shadow-lg border border-zinc-800 overflow-hidden w-full"
           >
             <button
-              className="w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center text-lg md:text-xl font-semibold text-white hover:text-gold transition-colors font-sans"
+              className="w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center text-lg md:text-xl font-semibold text-white hover:text-purple transition-colors font-sans"
               onClick={() => setOpen(open === i ? null : i)}
               aria-expanded={open === i}
             >
               {item.q}
               <span
-                className={`ml-4 flex items-center justify-center w-7 h-7 rounded-full border border-gold text-gold bg-zinc-950 transition-transform duration-300 ${
+                className={`ml-4 flex items-center justify-center w-7 h-7 rounded-full border border-purple text-purple bg-zinc-950 transition-transform duration-300 ${
                   open === i ? "rotate-45" : "rotate-0"
                 }`}
               >

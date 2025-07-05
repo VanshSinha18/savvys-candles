@@ -5,12 +5,12 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-16 px-4 bg-transparent">
       <div className="max-w-3xl w-full text-center mb-12">
-        <h1 className="text-4xl md:text-6xl font-bold font-dancing text-gold mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold font-dancing text-purple mb-4">
           About Savvy's Candles
         </h1>
         <p className="text-lg md:text-2xl text-zinc-200 mb-6">
           At{" "}
-          <span className="font-dancing text-gold text-2xl">
+          <span className="font-dancing text-purple text-2xl">
             Savvy's Candles
           </span>
           , we believe in the magic of light and scent. Our journey began with a
@@ -28,7 +28,7 @@ export default function AboutPage() {
           className="rounded-3xl shadow-xl w-full md:w-1/2 h-[320px] object-cover"
         />
         <div className="flex-1 text-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-gold mb-4 font-heading">
+          <h2 className="text-2xl md:text-3xl font-bold text-purple mb-4 font-heading">
             Our Story
           </h2>
           <p className="text-zinc-200 text-lg md:text-xl leading-relaxed">

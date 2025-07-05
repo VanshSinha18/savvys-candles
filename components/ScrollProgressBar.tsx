@@ -24,7 +24,7 @@ export default function ScrollProgressBar() {
     <div className="fixed top-0 left-0 w-full h-1 z-[9999] bg-transparent">
       <div
         ref={progressRef}
-        className="h-full bg-gold transition-all"
+        className="h-full bg-purple transition-all"
         style={{ width: 0 }}
       />
     </div>

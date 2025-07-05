@@ -25,7 +25,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           ry="400"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
           fill={fill || "white"}
-          fillOpacity="0.13"
+          fillOpacity="0.25"
         ></ellipse>
       </g>
       <defs>
@@ -46,7 +46,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
             result="shape"
           ></feBlend>
           <feGaussianBlur
-            stdDeviation="320"
+            stdDeviation="500"
             result="effect1_foregroundBlur_1065_8"
           ></feGaussianBlur>
         </filter>
