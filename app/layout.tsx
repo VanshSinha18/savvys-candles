@@ -21,15 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-black">
+    <html lang="en">
       <head>
         <meta name="theme-color" content="#000000" />
-        <style>{`html,body{background:#000!important;color:#fff!important;}`}</style>
       </head>
-      <body
-        className="min-h-screen flex flex-col bg-black"
-        style={{ background: "#000", color: "#fff" }}
-      >
+      <body className="min-h-screen flex flex-col bg-white text-black dark:bg-black dark:text-white">
         <ScrollProgressBar />
         <Providers>
           <Navbar />
