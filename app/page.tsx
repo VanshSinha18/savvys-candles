@@ -64,7 +64,7 @@ export default function HomePage() {
   return (
     <GridBackground>
       {/* Spotlight background, covers hero and top of products */}
-      <div className="pointer-events-none absolute left-0 top-0 w-full h-[900px] z-0">
+      <div className="hidden dark:block pointer-events-none absolute left-0 top-0 w-full h-[900px] z-0">
         <Spotlight
           className="left-[35vw] top-0 -translate-y-[20%] w-[400vw] h-[220vh]"
           fill="#A259F7"
@@ -77,10 +77,10 @@ export default function HomePage() {
       >
         {/* Hero Content */}
         <div className="relative z-20 max-w-3xl text-left mx-auto md:ml-0 md:mr-auto pb-24">
-          <h1 className="font-extrabold text-4xl md:text-6xl leading-tight mb-4 font-sans text-white">
+          <h1 className="font-extrabold text-4xl md:text-6xl leading-tight mb-4 font-sans text-black dark:text-white">
             Discover <span className="text-purple">Premium Candles</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8">
+          <p className="text-lg md:text-xl text-black/80 dark:text-white/80 mb-8">
             Hand-poured, eco-friendly, and designed to elevate your space.
           </p>
           <a

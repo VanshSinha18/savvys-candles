@@ -11,14 +11,12 @@ function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
-    // On mount, check localStorage or system preference
     const saved =
       typeof window !== "undefined" ? localStorage.getItem("theme") : null;
     if (saved === "light" || saved === "dark") {
       setTheme(saved);
       document.documentElement.classList.toggle("dark", saved === "dark");
     } else {
-      // Auto-detect system
       const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
@@ -41,9 +39,10 @@ function ThemeToggle() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle theme"
-      className="text-xl text-purple hover:text-white transition-colors p-2 rounded-full border border-transparent hover:border-purple bg-transparent focus:outline-none"
+      className="text-xl text-purple hover:text-black dark:hover:text-white transition-colors p-2 rounded-full border border-transparent hover:border-purple bg-transparent focus:outline-none"
     >
-      {theme === "dark" ? <FiSun /> : <FiMoon />}
+      {/* Show moon icon in light mode, sun icon in dark mode */}
+      {theme === "light" ? <FiMoon /> : <FiSun />}
     </button>
   );
 }
@@ -51,12 +50,12 @@ function ThemeToggle() {
 export default function Navbar() {
   const { cartCount } = useCart();
   return (
-    <nav className="w-full bg-black/90 dark:bg-white/90 backdrop-blur border-b border-zinc-800 dark:border-zinc-200 shadow-sm sticky top-0 z-50">
+    <nav className="w-full bg-white/90 dark:bg-black/90 border-b border-zinc-200 dark:border-zinc-800 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link
           href="/"
-          className="font-michroma text-3xl font-bold tracking-tight text-purple drop-shadow-sm"
+          className="font-michroma text-3xl font-bold tracking-tight text-purple"
           style={{ letterSpacing: "0.04em" }}
         >
           Savvy's Candles

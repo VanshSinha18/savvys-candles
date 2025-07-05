@@ -19,7 +19,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   const { addToCart } = useCart();
   return (
-    <div className="bg-zinc-900 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-0 flex flex-col overflow-hidden border border-zinc-800">
+    <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-0 flex flex-col overflow-hidden">
       <div className="relative w-full aspect-[4/3] overflow-hidden">
         <Image
           src={imageUrl}
@@ -34,7 +34,7 @@ export default function ProductCard({
         </h2>
         <p className="text-zinc-400 text-sm mb-3 line-clamp-2">{description}</p>
         <div className="flex items-center justify-between mt-auto">
-          <span className="font-bold text-purple text-lg">
+          <span className="font-bold text-lg text-black dark:text-white">
             ${(price / 100).toFixed(2)}
           </span>
           <button

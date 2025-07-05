@@ -86,12 +86,12 @@ function CandleCard({ candle, index }: CandleCardProps) {
       {/* Content */}
       <div className="p-6">
         {/* Name */}
-        <h3 className="font-sans font-bold text-xl text-white mb-2 group-hover:text-purple transition-colors duration-300">
+        <h3 className="font-sans font-bold text-xl text-black dark:text-white mb-2 group-hover:text-purple transition-colors duration-300">
           {candle.name}
         </h3>
 
         {/* Description */}
-        <p className="text-zinc-400 text-sm mb-4 h-10 overflow-hidden leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 text-sm mb-4 h-10 overflow-hidden leading-relaxed">
           {candle.description}
         </p>
 
@@ -181,10 +181,10 @@ export default function CandleGrid() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white font-sans mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold font-sans text-black dark:text-white mb-4">
             Our Candles
           </h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="text-zinc-700 dark:text-zinc-400 text-lg max-w-2xl mx-auto">
             Hand-poured with premium ingredients, each candle is crafted to
             bring warmth and comfort to your space.
           </p>
